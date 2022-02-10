@@ -1,0 +1,161 @@
+/*
+File Name: aceinthehole.css
+Date: 5/13/2019
+Programmer: Robert Heintze
+Part of this code was borrowed from CAS 225 javajam.css
+*/
+
+@import "palette.less";
+
+* { box-sizing: border-box; }
+header, nav, main, footer { display: block; }
+body { background-color: @colorbb;
+
+      color: @colorbf;
+      font-family: Verdana, Arial, sans-serif;
+	  background-image: url(../images/background.gif);
+}
+#wrapper { background-color: @colorbb;
+
+           width: 80%;
+           margin-right: auto;
+		   margin-left: auto;
+           min-width: 900px;
+		   max-width: 1280px;
+		   box-shadow: 3px 3px 3px #666666; 
+}
+
+header { background-color: @colorhb;
+        height: 150px;
+       background-image: url(../images/logo.jpg);
+       background-repeat: no-repeat;
+}
+
+h1 { padding-top: 45px;
+    padding-left: 220px;
+	font-size: 3em; 
+}
+
+h2 { font-size: 2em;}
+h3 { font-size: 1.5em;}
+h4 {font-size: 1em;}
+
+nav { text-align: center;
+     font-weight: bold; 
+	 font-size: 1.5em;
+	 padding-top: 10px;
+	 float: left;
+	 width: 200px;
+}
+
+nav a { text-decoration: none; }
+nav a:link { color: @colornfl; }
+nav a:visited{ color: @colornfv; }
+nav a:hover { color: @colornfh; }
+nav ul { list-style-type: none;
+       padding-left: 0; 
+}
+
+footer { background-color: @colorfb;
+       font-size: small;
+	   font-style: italic;
+	   text-align: center;
+	   padding-bottom: 10px;
+	   border-top: 2px @colorfbt solid;
+}
+
+main { padding: 0 0 2em 0;
+      margin-left: 200px;
+	  background-color: @colormb;
+}
+
+main li { padding-left: 10em};
+}
+main h2, main h3, main h4, main p, main div, main ul, main dl { padding-left: 4em; padding-right: 2em; }
+
+
+.floatleft { float: left;
+             padding-right: 20px;
+			 padding-bottom: 20px; 
+}
+img { padding-left: 10px;
+     padding-right: 10px;
+}
+#event { background-image: url(../images/placeholder.jpg);
+           background-size: 100% 100%;
+		   height: 250px; }
+
+#mobile { display: none; }
+#desktop { display: inline; }
+table { width: 90%;
+      margin: auto;
+	  border-spacing: 0;
+	  background-color: #FFFFCC; }
+td, th { padding: 10px; }
+tr:nth-of-type(odd) { background-color: #D2B48C; }
+form { padding: 2em; }
+label { float: left;
+      display: block;
+	  text-align: right;
+	   width: 8em;
+	   padding-right: 1em; }
+input, textarea { display: block; margin-bottom: 1em; }
+#mySubmit { margin-left: 9.5em; }
+audio { display: block; margin-top: 1em; }
+
+@media only screen and (max-width: 1024px) {
+	body { background-image: none; }
+	#wrapper { width: auto;
+				min-width: 0;
+				margin: 0;
+				padding: 0;
+				box-shadow: none; 	}
+	header { border-bottom: 5px solid #FEF6C2; }
+	h1 { margin-top: 0;
+	    margin-bottom: 1em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		font-size: 2.5em; 	}
+	nav { float: none;
+	      width: auto;
+		  padding-top: 0;
+		  margin: 10px;
+		  font-size: 1.3em; 	}
+	nav li  { display: inline-block; }
+	nav a { padding: 1em; 
+	      width: 8em;
+		  font-weight: bold;
+		  border-style: none; }
+	nav ul { padding: 0;
+	       margin: 0; }
+	#event { margin: 0; padding: 0; }
+	main { padding: 0;
+	      margin: 0;
+		  font-size: 90%; }
+}
+
+@media only screen and (max-width: 768px) {
+	header { background-image: url(../images/logomini.jpg);
+			height: 128px; }
+	h1 { font-size: 2em;
+	     text-align: center;
+		 padding-left: 0; }
+	nav { margin: 0; }
+	nav a { display: block;
+	       padding: 0.2em;
+		   width: auto;
+		   border-bottom: 1px solid #FEF6C2; }
+	nav li { display: block; }
+	main  { padding-top: 1px; }
+	h2 { padding: 0.5em 0 0 0.5em;
+									  margin-right: 0.5em; }
+	h3 { padding: 0.5em 0 0 0.5em;
+		margin-right: 1em; }
+	h4 { padding: 0.5em 0 0 0.5em;
+		margin-right: 1.5em; }
+	.details { padding-left: 0; padding-right: 0; }
+	#heroroad { background-image: none; height: auto; }
+	.floatleft { padding-left: 0.5em; padding-right: 0.5em; }
+	#mobile { display: inline; }
+	#desktop { display: none; }
+}
